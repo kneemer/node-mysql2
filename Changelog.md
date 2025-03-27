@@ -1,5 +1,36 @@
 # Changelog
 
+## [3.15.0](https://github.com/kneemer/node-mysql2/compare/v3.14.0...v3.15.0) (2025-03-27)
+
+
+### Features
+
+* **`disableEval`:** add static parsers ([#3365](https://github.com/kneemer/node-mysql2/issues/3365)) ([51da653](https://github.com/kneemer/node-mysql2/commit/51da653448855a57f87fa686a10fd8aa482da498))
+* add `RegExp` support to PoolCluster ([#3451](https://github.com/kneemer/node-mysql2/issues/3451)) ([2d5050d](https://github.com/kneemer/node-mysql2/commit/2d5050d59c28b269d1ef52b70a726777a34ecf1c))
+* add jsonStrings option ([#2642](https://github.com/kneemer/node-mysql2/issues/2642)) ([9820fe5](https://github.com/kneemer/node-mysql2/commit/9820fe51b48cadd48024956e62d9fceac2e5a880))
+* fully support VECTOR type results ([9576742](https://github.com/kneemer/node-mysql2/commit/9576742f56f234ac50bfd099bc84c8f593971e74))
+* **PoolCluster:** `restoreNodeTimeout` implementation ([#3218](https://github.com/kneemer/node-mysql2/issues/3218)) ([9a38601](https://github.com/kneemer/node-mysql2/commit/9a3860186c12452c8e4b60d700d4e1599cc7aefa))
+* support Cloudflare Workers ([#2289](https://github.com/kneemer/node-mysql2/issues/2289)) ([a79253d](https://github.com/kneemer/node-mysql2/commit/a79253d17e5308a71501bbe8ed4df12f5805f0fd))
+
+
+### Bug Fixes
+
+* `PromisePoolCluster.of` returns `PromisePoolCluster` instead of `PoolNamespace` ([#3261](https://github.com/kneemer/node-mysql2/issues/3261)) ([be22202](https://github.com/kneemer/node-mysql2/commit/be22202e87afce0558dd079c79e0e18f45cd73ad))
+* 1040 datetime fields returned without time part when time is 00:00:00 ([#3204](https://github.com/kneemer/node-mysql2/issues/3204)) ([bded498](https://github.com/kneemer/node-mysql2/commit/bded4980065319e58a4f87d828cc355fb79f5bd3))
+* circular dependencies ([#3081](https://github.com/kneemer/node-mysql2/issues/3081)) ([d5a76e6](https://github.com/kneemer/node-mysql2/commit/d5a76e6c49fbb1bfea405ad809e3076fe5bda39d))
+* **connection config:** remove keepAliveInitialDelay default value ([#2712](https://github.com/kneemer/node-mysql2/issues/2712)) ([688ebab](https://github.com/kneemer/node-mysql2/commit/688ebab84961ae82863f811fa772cfd26fbadc0e))
+* **createPoolCluster:** add pattern and selector to promise-based `getConnection` ([#3017](https://github.com/kneemer/node-mysql2/issues/3017)) ([ab7c49f](https://github.com/kneemer/node-mysql2/commit/ab7c49f24fad7b241cdc0046ead9917bbddccced)), closes [#1381](https://github.com/kneemer/node-mysql2/issues/1381)
+* Deno `v2` requires `commonjs` type explicitly ([#3209](https://github.com/kneemer/node-mysql2/issues/3209)) ([cdc9415](https://github.com/kneemer/node-mysql2/commit/cdc9415c7cbe5806996b05415841b283ae0bd85d))
+* handshake SSL error with AWS RDS ([#2857](https://github.com/kneemer/node-mysql2/issues/2857)) ([de071bb](https://github.com/kneemer/node-mysql2/commit/de071bb1d7738693793ff3ea24d5f933f6fa4792))
+* **query:** support `VECTOR` packets in static parser ([#3379](https://github.com/kneemer/node-mysql2/issues/3379)) ([603c246](https://github.com/kneemer/node-mysql2/commit/603c24630da0f999a01227d44cf2633d703e40ed))
+* resolve LRU conflicts, cache loss and premature engine breaking change ([#2988](https://github.com/kneemer/node-mysql2/issues/2988)) ([2c3c858](https://github.com/kneemer/node-mysql2/commit/2c3c858fd0425b29f488a7cd24df749539c93aa2))
+* setMaxParserCache throws TypeError ([#2757](https://github.com/kneemer/node-mysql2/issues/2757)) ([aa8604a](https://github.com/kneemer/node-mysql2/commit/aa8604a32b28c2024da006edce30d88ad22d8a06))
+* **stream:** reads should emit the dataset number for each dataset ([#2628](https://github.com/kneemer/node-mysql2/issues/2628)) ([4dab4ca](https://github.com/kneemer/node-mysql2/commit/4dab4cad2c3b9b165d6118636a179b5443e50442))
+* **typeCast:** ensure the same behavior for `field.string()` with `query` and `execute` ([#2820](https://github.com/kneemer/node-mysql2/issues/2820)) ([27e38ea](https://github.com/kneemer/node-mysql2/commit/27e38ea3f084f445a8e5a4909341b5e740bdf474))
+* **types:** correct TypeCast's Next callback to return unknown ([#3129](https://github.com/kneemer/node-mysql2/issues/3129)) ([401db79](https://github.com/kneemer/node-mysql2/commit/401db79b88cae8731a9eb334e456528134f821f9))
+* **typings:** synchronize types of sqlstring ([#3047](https://github.com/kneemer/node-mysql2/issues/3047)) ([81be01b](https://github.com/kneemer/node-mysql2/commit/81be01b1bce30cac3f6fcc130aaf859349c5d3d2))
+* update connection cleanup process to handle expired connections and exceeding `config.maxIdle` ([#3022](https://github.com/kneemer/node-mysql2/issues/3022)) ([b091cf4](https://github.com/kneemer/node-mysql2/commit/b091cf49d4165e991cb7c51dd6074be1c996a98e))
+
 ## [3.14.0](https://github.com/sidorares/node-mysql2/compare/v3.13.0...v3.14.0) (2025-03-19)
 
 
